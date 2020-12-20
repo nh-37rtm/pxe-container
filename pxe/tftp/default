@@ -1,0 +1,4 @@
+DEFAULT linux
+LABEL linux
+KERNEL linux
+APPEND initrd=initrd.gz

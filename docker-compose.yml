@@ -1,0 +1,15 @@
+version: '3'
+services:
+  pxe:
+    build: .
+    networks: 
+      - mcvlan0
+    
+    command:  "/bin/bash /usr/local/start.sh"
+    volumes: 
+      - ./pxe/tftp:/tftp
+
+networks: 
+  mcvlan0:
+    external: 
+      name: mcvlan0
